@@ -1,10 +1,12 @@
 import UserCard from "./UserCard"
 
-const peopleTofollow = [
-    {name:"Allen Gouse",Following:false},
-    {name:"Ruben Bator",Following:true},
-    {name:"Aspen Stantum",Following:false},
-    {name:"Jack Mike",Following:false}
+
+
+const peoplesTofollow  = [
+    {name:"Allen Gouse",following:false},
+    {name:"Ruben Bator",following:true},
+    {name:"Aspen Stantum",following:false},
+    {name:"Jack Mike",following:false},
 ]
 const PeopleToFollow = () => {
   return (
@@ -13,8 +15,8 @@ const PeopleToFollow = () => {
 People To Follow
 </h3>
 <div className="space-y-4">
-    {peopleTofollow.map((index,person)=>(
-        <UserCard key={index} person={person}/>
+    {peoplesTofollow.map((person,index)=>(
+        <UserCard index={index} person={person}/>
     ))}
 </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Navigation from './components/Navigation'
 import PeopleToFollow from './components/PeopleToFollow'
 

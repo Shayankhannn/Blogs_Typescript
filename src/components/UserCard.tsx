@@ -2,16 +2,21 @@ import { FaUserCircle } from "react-icons/fa";
 
 
 interface userCardProps {
-index:number;
-person:string;
+  index:number;
+person:{
+  name: string;
+    following: boolean;
+};
 }
 
 const UserCard  = ({index,person}: userCardProps) => {
   return (
     <div className="flex items-center justify-between">
-        <div className="flex items-center">
+        <section className="flex items-center">
             <FaUserCircle className="text-3xl mr-3text-gray-500"/>
-        </div>
+            <span>{person.name}</span>
+        </section>
+        <button >{person.following ? 'Following' : 'Follow'}</button>
     </div>
   )
 }
