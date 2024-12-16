@@ -17,7 +17,7 @@ const trends = [
   
   const TrendsList = () => {
     return (
-      <div className="bg-white p-4rounded-lg shadow mt-8">
+      <div className="bg-white p-4 rounded-lg shadow mt-8">
         <h3 className="font-semibold text-lg mb-4">Today's Top Trends</h3>
         <ul className="space-y-4">
             {trends.map((trend,index)=>(
