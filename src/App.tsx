@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Blog } from "./Shared/Types";
 import Modal from "./components/Modal";
 import BlogForm from "./components/BlogForm";
+import ArticleList from "./components/ArticleList";
 
 const App = () => {
 
@@ -19,7 +20,7 @@ const openModalForNewBlog = ()=>{
   setIsModalOpen(true)
 }
 
-const openModalForEdit = ()=>{
+const openModalForEdit = (blog:Blog)=>{
   setEditingBlog(blog)
   setIsModalOpen(true)
 }
@@ -35,11 +36,11 @@ const openModalForEdit = ()=>{
                 Add New Blog <IoMdAddCircle className="ml-[.5rem]"/>
               </button>
               {/* article list  */}
-
+              <ArticleList onEdit={openModalForEdit}/>
               {isModalOpen && <Modal onClose={()=>setIsModalOpen(false)}>
                 
                 <BlogForm
-                existingBlog={editingBlog}
+                existingBlog ={editingBlog}
                 onClose={()=>setIsModalOpen(false)}
                 />
 

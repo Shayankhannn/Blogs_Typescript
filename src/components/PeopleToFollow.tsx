@@ -16,7 +16,7 @@ People To Follow
 </h3>
 <div className="space-y-4">
     {peoplesTofollow.map((person,index)=>(
-        <UserCard index={index} person={person}/>
+        <UserCard key={index} person={person}/>
     ))}
 </div>
     </div>

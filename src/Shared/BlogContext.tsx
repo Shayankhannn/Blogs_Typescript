@@ -14,17 +14,17 @@ export const  BlogProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const [blogs, setBlogs] = useState<Blog[]>([]);
 
     const addBlog = (blog: Blog) => {
-        setBlogs((prevBlogs) => [...prevBlogs, blog]);
+        setBlogs((blogs) => [...blogs, blog]);
     };
 
     const updateBlog = (updatedBlog: Blog) => {
-        setBlogs((prevBlogs) =>
-            prevBlogs.map((blog) => (blog.id === updatedBlog.id ? updatedBlog : blog))
+        setBlogs(
+            blogs.map((blog) => (blog.id === updatedBlog.id ? updatedBlog : blog))
         );
     };
 
     const deleteBlog = (id: number) => {
-        setBlogs((prevBlogs) => prevBlogs.filter((blog) => blog.id !== id));
+        setBlogs(blogs.filter((blog) => blog.id !== id));
     };
 
     return (
